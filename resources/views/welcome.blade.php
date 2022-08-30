@@ -84,7 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    MyMakmal
+                    MyMakmal Ziela
                 </div>
                 <p> Access to Your Laboratory Assets from Anywhere, at Anytime</p>
              </div>
