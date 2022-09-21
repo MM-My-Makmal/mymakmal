@@ -129,3 +129,13 @@ class StudentController extends Controller
                         ->with('success','Student deleted successfully');
     }
 }
+
+// Adding permissions to a user
+//$user->givePermissionTo('');
+
+//Adding permissions via role
+//$user->assignRole('');
+
+//$role->givePermissionTo('');
+
+//$user->can('edit');

@@ -7,6 +7,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Group;
 
+
+//use Spatie\Permission\Traits\HasRoles;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -43,3 +46,8 @@ class User extends Authenticatable
         return $this->belongsTo(Group::class, 'group_id');
     }
 }
+
+//Adding permission to a user
+$user-
+
+
