@@ -5,7 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">
+                <div class="card text-center">
+                <img src="img/VSys-MyMakmal-Logo (2).png" alt="Logo"></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -53,14 +55,25 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Login') }}
                                 </button>
+
+                                <!-- <a href="index.html" class="btn btn-primary">
+                                    {{ __('Home') }}
+                                </a> -->
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
+
+                                    @if (Route::has('register'))
+                                        <a class="btn btn-link" href="{{ route('register') }}">
+                                            {{ __('Not registered yet? Register now!') }}
+                                        </a>
+                                    @endif
+
                                 @endif
                             </div>
                         </div>

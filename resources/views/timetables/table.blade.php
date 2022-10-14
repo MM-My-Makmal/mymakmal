@@ -17,7 +17,7 @@
     @endif
    
     <table class="table table-bordered">
-        <tr>
+        <tr class="table-secondary">
             <th>No</th>
             <th>Day</th>
             <th>Subject</th>

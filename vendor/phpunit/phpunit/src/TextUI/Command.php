@@ -32,7 +32,6 @@ use function is_string;
 use function printf;
 use function realpath;
 use function sort;
-
 use function sprintf;
 use function str_replace;
 use function stream_resolve_include_path;
@@ -446,6 +445,9 @@ class Command
                     print 'Source directory (relative to path shown above; default: src): ';
                     $src = trim(fgets(STDIN));
 
+                    print 'Cache directory (relative to path shown above; default: .phpunit.cache): ';
+                    $cacheDirectory = trim(fgets(STDIN));
+
                     if ($bootstrapScript === '') {
                         $bootstrapScript = 'vendor/autoload.php';
                     }
@@ -458,6 +460,10 @@ class Command
                         $src = 'src';
                     }
 
+                    if ($cacheDirectory === '') {
+                        $cacheDirectory = '.phpunit.cache';
+                    }
+
                     $generator = new ConfigurationGenerator;
 
                     file_put_contents(
@@ -466,11 +472,13 @@ class Command
                             Version::series(),
                             $bootstrapScript,
                             $testsDirectory,
-                            $src
+                            $src,
+                            $cacheDirectory
                         )
                     );
 
                     print PHP_EOL . 'Generated phpunit.xml in ' . getcwd() . PHP_EOL;
+                    print 'Make sure to exclude the ' . $cacheDirectory . ' directory from version control.' . PHP_EOL;
 
                     exit(TestRunner::SUCCESS_EXIT);
 

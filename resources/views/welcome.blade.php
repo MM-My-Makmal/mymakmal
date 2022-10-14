@@ -8,22 +8,31 @@
         
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alkalami:200,600" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
 
                 background-color: #fff;
-                background-image: url('img-grl.jpg');
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
+                /* background-image: url('image/hero-img.png'); */
+                color: #000000;
+                font-family: 'Alkalami', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
             }
 
+            img {
+                width: 250px;
+                height: 250px;
+                float: left;
+                margin-left: 1%;
+                padding: 15%;
+            }
+
             .full-height {
+                /* background-color: #b1b5b7; */
                 height: 100vh;
             }
 
@@ -44,8 +53,16 @@
             }
 
             .content {
-                text-align: center;
+                /*text-align: right;*/
+                width:270px;
+                height:auto;
+                padding:1%;
             }
+
+            /* .content-left { 
+                image-align:left;
+                background-image: url('image/hero-img.png');
+            }*/
 
             .title {
                 font-size: 84px;
@@ -67,6 +84,8 @@
         </style>
     </head>
     <body>
+        <img src= "{{ url('image/hero-img.png') }}" />
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">

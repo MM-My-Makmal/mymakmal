@@ -31,7 +31,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="{{ asset('admin/dist/img/Logo Mymakmal.png') }}" alt="Logo Mymakmal" height="60" width="60">
+    <img class="animation__shake" src="{{ asset('admin/dist/img/setting-mymakmal.png') }}" alt="Logo Mymakmal" height="200" width="200">
   </div>
 
   <!-- Navbar -->

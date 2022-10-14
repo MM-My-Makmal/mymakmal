@@ -47,7 +47,5 @@ class User extends Authenticatable
     }
 }
 
-//Adding permission to a user
-$user-
-
-
+// //Adding permission to a user
+// $user-

@@ -17,7 +17,7 @@
     @endif
    
     <table class="table table-bordered">
-        <tr>
+        <tr class="table-warning">
             <th>No</th>
             <th>Equipment Code</th>
             <th>Name</th>

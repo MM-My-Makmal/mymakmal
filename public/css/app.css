@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -3955,7 +3956,7 @@ input[type=button].btn-block {
   min-height: 1.44rem;
   padding-left: 1.5rem;
   -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+          print-color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -4868,7 +4869,7 @@ input[type=button].btn-block {
   display: none;
 }
 
-.navbar-light .navbar-brand {
+.navbar-light {
   color: rgba(0, 0, 0, 0.9);
 }
 

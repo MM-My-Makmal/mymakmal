@@ -13,6 +13,7 @@
                         </div>
                     @endif
 
+                    <div>{{ __('WELCOME')}} {{ auth()->user()->name }}</div>
                     {{ __('You are logged in!') }}
                 </div>
             </div>
