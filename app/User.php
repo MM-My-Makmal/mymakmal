@@ -46,6 +46,3 @@ class User extends Authenticatable
         return $this->belongsTo(Group::class, 'group_id');
     }
 }
-
-// //Adding permission to a user
-// $user-

@@ -86,7 +86,7 @@ class StudentController extends Controller
 
         return view('crud.edit',compact('student', 'groups'));
     }
-  
+   
     /**
      * Update the specified resource in storage.
      *
@@ -109,7 +109,7 @@ class StudentController extends Controller
             'group_id' => $request->group_id
         ]);
   
-        // $student->update($request->all());
+        // $student->update($request->all());;
   
         return redirect()->route('students.index')
                         ->with('success','Student updated successfully');
@@ -130,12 +130,3 @@ class StudentController extends Controller
     }
 }
 
-// Adding permissions to a user
-//$user->givePermissionTo('');
-
-//Adding permissions via role
-//$user->assignRole('');
-
-//$role->givePermissionTo('');
-
-//$user->can('edit');
