@@ -67,8 +67,33 @@
           <img src="{{ asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{ auth()->user()->name }}</a>
-          <a href="#" class="d-block">{{ auth()->user()->email }}</a>
+          <!-- <a href="#" class="d-block">{{ auth()->user()->name }}</a>
+          <a href="#" class="d-block">{{ auth()->user()->email }}</a> -->
+
+                            @if (Auth::user()->type_id=='1')
+                            <a class="fw-bolder">{{ Auth::user()->name }}</a>
+                            <hr>
+                            <a class="fw-bolder">Role Name:</a>
+                            <a class="badge bg-success">Admin</a>
+                            @endif
+                            @if (Auth::user()->type_id=='2')
+                                <a class="fw-bolder">{{ Auth::user()->name }}</a>
+                                <hr>
+                                <a class="fw-bolder">Role Name:</a>
+                                <a class="badge bg-info">Lecturer</a>
+                            @endif
+                            @if (Auth::user()->type_id=='3')
+                                <a class="fw-bolder">{{ Auth::user()->name }}</a>
+                                <hr>
+                                <a class="fw-bolder">Role Name:</a>
+                                <a class="badge bg-warning">Lab Assistant</a>
+                            @endif
+                            @if (Auth::user()->type_id=='4')
+                                <a class="fw-bolder">{{ Auth::user()->name }}</a>
+                                <hr>
+                                <a class="fw-bolder">Role Name:</a>
+                                <a class="badge bg-warning">Student</a>
+                            @endif
         </div>
       </div>
 
@@ -84,7 +109,9 @@
                 Dashboard
               </p>
             </a>
-          </li>      
+          </li>     
+           
+        @if (Auth::user()->type_id=='1')
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
@@ -136,6 +163,152 @@
               </p>
             </a>
           </li>   
+        @endif
+
+        @if (Auth::user()->type_id=='2')
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                 Menu
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('students.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List of Student</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('subjects.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List of Equipment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('halls.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List of Experiment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('groups.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List of Session</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('timetables.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Timetable
+              </p>
+            </a>
+          </li>   
+          <li class="nav-item">
+            <a href="{{ route('students.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Users
+              </p>
+            </a>
+          </li>  
+
+        @endif
+
+        @if (Auth::user()->type_id=='3')
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                 Menu
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('students.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List of Student</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('subjects.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List of Equipment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('halls.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List of Experiment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('groups.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List of Session</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('timetables.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Timetable
+              </p>
+            </a>
+          </li>    
+
+        @endif
+
+        @if (Auth::user()->type_id=='4')
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                 Menu
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('students.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List of Student</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('groups.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List of Session</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('timetables.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Timetable
+              </p>
+            </a>
+          </li>   
+          <li class="nav-item">
+            <a href="{{ route('students.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Users
+              </p>
+            </a>
+          </li>   
+        @endif
+
           <li class="nav-item">
             <a href="{{ route('logout') }}" class="nav-link"  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
